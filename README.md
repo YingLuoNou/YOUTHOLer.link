@@ -43,7 +43,7 @@ public/config/config.json
 ## 具体提交步骤（推荐方式）
 
 1. Fork 仓库
-2. 编辑 `config/config.json`。
+2. 编辑 `public/config/config.json`。
    在对应年份的 services 中新增你的博客信息，例如：
    ```json
       {
