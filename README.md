@@ -56,7 +56,7 @@ public/config/config.json
          "icon": "img/preview/your-icon.png"
         }
      ]
-  }
+   }
    ```
 3. 将你的博客头像放入 `public/img/preview/`, 并在配置中正确填写路径。
 4. 提交 Pull Request。
