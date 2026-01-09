@@ -58,7 +58,7 @@ public/config/config.json
      ]
    }
    ```
-3. 将你的博客头像放入 `img/preview/`, 并在配置中正确填写路径。
+3. 将你的博客头像放入 `public/img/preview/`, 并在配置中正确填写路径。
 4. 提交 Pull Request。
 
 每一个博客链接，都是一次学习积累的见证。
