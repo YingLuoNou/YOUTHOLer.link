@@ -28,7 +28,7 @@ export default class Overview {
 			// stats.thirdParties += analysis.isThirdParty
 		}
 		this.div.querySelector(".big").setAttribute("style", `--value: ${stats.total}`)
-		this.div.querySelector(".small").innerText = `总收录博客数${(stats.total)}`
+		this.div.querySelector(".small").innerText = `总收录博客数`
 
 		// let encryption_t, encryption_d
 		// if (stats.secure == stats.total) {
