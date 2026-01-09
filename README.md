@@ -1,131 +1,66 @@
-# honey
+# 🎓 山东理工大学 · 青春在线博客站
 
-_A sweet dashboard I use on my homeserver with some self-hosted stuff..._
+本项目基于原 [honey](https://github.com/dani3l0/honey) 前端仪表盘进行二次开发与定制，完全使用原生 HTML / CSS / JavaScript 实现，无需后端服务即可部署运行，适合校园服务器、自建博客站或静态托管平台。
 
-honey is written in **pure** `HTML` `CSS` `JS` so dynamic backend or special webserver configuration is not required.
-It works out-of-the-box as all operations are done client-side.
+# 🌟 功能特点
 
-<font size="4">**[📺 Live demo](https://honeyy.vercel.app/)**</font>
+-   博客链接集中展示
+-   纯前端实现，零后端依赖
+-   支持深色 / 浅色模式
+-   卡片式博客入口，美观直观
+-   支持自定义图标与描述
+-   可快速扩展新的博客或栏目
 
-<img src="screenshot.jpg" style="width: 720px">
+# ⚙️ 配置说明
 
-
-## 🚀 Installation
-
-### 🕸️ On existing webserver
-
-1. Download latest prebuilt archive from **[Releases](https://github.com/dani3l0/honey/releases)**.
-
-2. Extract downloaded archive to your webserver root.
-
-3. You're done!
-
-
-### 🐋 via Docker
+## 📁 配置文件位置
 
 ```
-docker run -p 4173:4173 -v /path/to/config:/app/dist/config ghcr.io/dani3l0/honey:latest
+public/config/config.json
 ```
 
-- `-p 4173:4173` - exposes HTTP port to your machine
-- `-v /path/to/config:/app/dist/config` - mounts config directory to your local filesystem, missing config files will be created automatically
+## 🔗 链接配置
 
-If you have custom icons or background images, you can freely put them in `config` dir.
-Just remember to provide valid URLs (with `/config` prefix).
-
-_alternatively, use a `docker-compose.yml` file_
-
-
-## ⚙️ Configuration
-
-Configuration file is located at `config/config.json`.
+| 字段 | 说明     |
+| ---- | -------- |
+| name | 博客名称 |
+| desc | 博客简介 |
+| href | 博客链接 |
+| icon | 博客图标 |
 
 
-### 📱 Tweaking the user interface
+# 🤝 提交你的链接
 
-The following keys are available under `ui` section.
-Some of them are listed in _Settings_ page and can be customized by end-user.
+欢迎青春在线程序部成员及相关同学向本站提交个人博客链接，共同完善博客导航页面。
+本站仅用于展示博客入口，不收录具体文章内容。
 
-| Key name				| Description																								| in Settings	 |
-|-----------------------|-----------------------------------------------------------------------------------------------------------|----------------|
-| `name`				| Name shown at the main screen and the tab title.															|		❌		|
-| `desc`				| Short description shown under title at the main screen.													|		❌		|
-| `icon`				| Icon shown at the main screen and as site's favicon.														|		❌		|
-| `wallpaper`			| Background image visible when dark mode is disabled.														|		❌		|
-| `wallpaper_dark`		| Background image visible when dark mode is enabled.														|		❌		|
-| `dark_mode`			| Tells whether dark mode is enabled by default. (Available values: `Auto`,`Off`,`On`)						|		✅		|
-| `open_new_tab`		| Tells whether clicking on a service will open it in new tab by default.									|		✅		|
-| `ping_dots`			| Enables small dot before service name indicating whether is it available or not.							|		✅		|
-| `blur`				| Tells whether card background blur is enabled by default.													|		✅		|
-| `animations`			| Tells whether UI animations are enabled by default.														|		✅		|
-| `trusted_domains`		| Array of domains (or IP addresses) to no longer be considered as 3rd-parties. RegExp is fully supported.	|		✅		|
+在提交前，请确保你已具备：
 
+1. 一个可正常访问的博客地址
+2. 博客头像或图标（推荐尺寸：128 × 128，支持 png / jpg）
+3. 明确自己的入学年份
 
-### 🔗 Adding custom services
+## 具体提交步骤（推荐方式）
 
-`services` section is an array containing objects. Object's structure looks like this:
+1. Fork 仓库
+2. 编辑 `config/config.json`。
+   在对应年份的 services 中新增你的博客信息，例如：
+   ```json
+      {
+     "year": 2023,
+     "links": [
+       {
+         "name": "你的昵称",
+         "desc": "一句简短的博客介绍",
+         "href": "https://your-blog-link",
+         "icon": "img/preview/your-icon.png"
+       }
+     ]
+   }
+   ```
+3. 将你的博客头像放入 `img/preview/`, 并在配置中正确填写路径。
+4. 提交 Pull Request。
 
-| Key name			| Description																	|
-|-------------------|-------------------------------------------------------------------------------|
-| `name`			| Your service's name.															|
-| `desc`			| Short description shown under service's name.									|
-| `href`			| URL address of your service. It is directly passed to `<a>` tag.				|
-| `icon`			| Path to an icon of your service.												|
+每一个博客链接，都是一次学习积累的见证。
 
-Example:
-```
-...
-{
-	"name": "CalDav",
-	"desc": "Simple CalDav server for calendar sync between various devices.",
-	"href": "caldav",
-	"icon": "img/preview/caldav.png"
-},
-...
-```
-
-
-## 🛠️ Development
-
-honey is built on top of [Vite.js](https://vitejs.dev/). This tool allows faster development and offers various optimizations.
-
-How to prepare a development environment:
-
-```
-# Download the source code
-git clone https://github.com/dani3l0/honey && cd honey
-
-# Install required modules
-npm i
-```
-
-
-### 🗼 Live server
-
-**For coding.** This will spin up a HTTP server on **[localhost:5173](http://localhost:5173/)**. Each time source file is saved, UI will automatically hot-reload so there is no need for `ALT+TAB` and `F5`.
-
-```
-npm run dev
-```
-
-
-### 🏗️ Build
-
-**Prepare project for production.** This command will link and optimize project assets to take less space and require less bandwith. Prebuilt assets will be stored in `dist` directory and are ready to be put in a webserver root.
-
-```
-npm run build
-```
-
-
-## 🤝 Credits
-
-Of course, some third-party resources are used in this project. I kanged them for self-hosting, easier development and to avoid compatibility issues.
-
-- **[Material Icons](https://github.com/materialos/android-icon-pack/)**, for app icons at _Services_ page
-
-- **[Google Fonts](https://fonts.google.com/)**, for material icons on buttons and Quicksand font
-
-- **honey icon** - random icon found in DuckDuckGo Images
-
-- **Wallpapers** - very nice background images kanged from [wallhaven](https://wallhaven.cc/)
+欢迎你的加入，让青春在线的技术沉淀持续延续下去
