@@ -1,7 +1,7 @@
 {
 	"ui": {
-		"name": "honey",
-		"desc": "Nice and sweet place for all your self-hosted services.",
+		"name": "青春在线",
+		"desc": "这里是山东理工大学青春在线程序部的个人博客网站导航页\n青春在线，精彩无限！",
 		"icon": "img/icon.png",
 		"wallpaper": "img/background.jpg",
 		"wallpaper_dark": "img/background-dark.jpg",
@@ -10,56 +10,30 @@
 		"ping_dots": false,
 		"blur": true,
 		"animations": true,
-		"trusted_domains": []
+		"trusted_domains": ["youtholer.link"]
 	},
 	"services": [
 		{
-			"name": "CalDav",
-			"desc": "Simple CalDav server for calendar sync between various devices.",
-			"href": "caldav",
-			"icon": "img/preview/caldav.png"
+			"year":2023,
+			"links":[
+				{
+					"name": "CoolArec",
+					"desc": "你好，陌生人",
+					"href": "https://www.coolarec.link/",
+					"icon": "img/preview/coolarec.png"
+				}
+			]
 		},
 		{
-			"name": "Files",
-			"desc": "Fancy file manager for the web.",
-			"href": "files",
-			"icon": "img/preview/files.png"
-		},
-		{
-			"name": "Gallery",
-			"desc": "Photo & video gallery syncable with multiple Android devices.",
-			"href": "gallery",
-			"icon": "img/preview/gallery.png"
-		},
-		{
-			"name": "Git",
-			"desc": "Self-hosted, painless, secure place for your repositories.",
-			"href": "git",
-			"icon": "img/preview/git.png"
-		},
-		{
-			"name": "E-Mail",
-			"desc": "Feature-rich, decentralized and secure E-Mail server.",
-			"href": "mail",
-			"icon": "img/preview/mail.png"
-		},
-		{
-			"name": "Music",
-			"desc": "Beautiful, moody music streaming app.",
-			"href": "music",
-			"icon": "img/preview/music.png"
-		},
-		{
-			"name": "Notes",
-			"desc": "Sweet & lightweight app for taking notes.",
-			"href": "notes",
-			"icon": "img/preview/notes.png"
-		},
-		{
-			"name": "Google",
-			"desc": "DON'T CLICK: goes to google.com",
-			"href": "https://google.com",
-			"icon": "img/preview/google.png"
+			"year":2021,
+			"links":[
+				{
+					"name": "bulbul559",
+					"desc": "在战斗中学会战斗",
+					"href": "https://bulbul559.cn/",
+					"icon": "img/preview/bulbul559.jpg"
+				}
+			]
 		}
 	]
 }

@@ -18,6 +18,10 @@
 	transition: background .2s;
 }
 
+.box img{
+	border-radius:50%;
+}
+
 .box:hover {
 	background: var(--hover);
 }

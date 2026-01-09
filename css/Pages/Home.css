@@ -65,11 +65,13 @@
 
 .appname {
 	font-size: 48px;
+	color: #ebebeb;
 }
 
 .appdesc {
 	opacity: .6;
 	margin: 2px 12px;
+	color: #ebebeb;
 }
 
 .buttons {
