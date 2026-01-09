@@ -46,17 +46,17 @@ public/config/config.json
 2. 编辑 `public/config/config.json`。
    在对应年份的 services 中新增你的博客信息，例如：
    ```json
-      {
+  {
      "year": 2023,
      "links": [
-       {
+        {
          "name": "你的昵称",
          "desc": "一句简短的博客介绍",
          "href": "https://your-blog-link",
          "icon": "img/preview/your-icon.png"
-       }
+        }
      ]
-   }
+  }
    ```
 3. 将你的博客头像放入 `public/img/preview/`, 并在配置中正确填写路径。
 4. 提交 Pull Request。
