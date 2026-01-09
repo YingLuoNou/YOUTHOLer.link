@@ -46,7 +46,7 @@ public/config/config.json
 2. 编辑 `public/config/config.json`。
    在对应年份的 services 中新增你的博客信息，例如：
    ```json
-  {
+   {
      "year": 2023,
      "links": [
         {
@@ -62,5 +62,4 @@ public/config/config.json
 4. 提交 Pull Request。
 
 每一个博客链接，都是一次学习积累的见证。
-
 欢迎你的加入，让青春在线的技术沉淀持续延续下去
