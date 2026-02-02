@@ -14,6 +14,17 @@
 	},
 	"services": [
 		{
+			"year":2024,
+			"links":[
+				{
+					"name": "YangLuoNou",
+					"desc": "YangLuoNou's Blog",
+					"href": "https://www.yangluonou.space/",
+					"icon": "https://www.yangluonou.space/img/favicon.ico"
+				}
+			]
+		},
+		{
 			"year":2023,
 			"links":[
 				{
